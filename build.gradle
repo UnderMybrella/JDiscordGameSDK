@@ -23,7 +23,7 @@ task sourcesJar(type: Jar, dependsOn: classes) {
     baseName = jar.baseName
     appendix = jar.appendix
     version = jar.version
-    from sourceSets.main.allSource
+    from sourceSets.main.java
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
@@ -49,7 +49,7 @@ publishing {
 
     publications {
         maven(MavenPublication) {
-            artifactId = "spiral-$project.name"
+            artifactId = "$project.name"
             from components.java
             artifact sourcesJar
             artifact javadocJar
