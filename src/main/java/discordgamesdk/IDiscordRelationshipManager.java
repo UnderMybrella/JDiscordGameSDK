@@ -18,7 +18,7 @@ public class IDiscordRelationshipManager extends Structure {
 	/** C type : filter_callback* */
 	public filter_callback filter;
 	/** C type : count_callback* */
-	public IDiscordStorageManager.count_callback count;
+	public count_callback count;
 	/** C type : get_callback* */
 	public get_callback get;
 	/** C type : get_at_callback* */
@@ -51,7 +51,7 @@ public class IDiscordRelationshipManager extends Structure {
 	 * @param get C type : get_callback*<br>
 	 * @param get_at C type : get_at_callback*
 	 */
-	public IDiscordRelationshipManager(filter_callback filter, IDiscordStorageManager.count_callback count, get_callback get, get_at_callback get_at) {
+	public IDiscordRelationshipManager(filter_callback filter, count_callback count, get_callback get, get_at_callback get_at) {
 		super();
 		this.filter = filter;
 		this.count = count;
