@@ -21,11 +21,11 @@ public class IDiscordLobbyTransaction extends Structure {
 	/** C type : set_capacity_callback* */
 	public set_capacity_callback set_capacity;
 	/** C type : set_metadata_callback* */
-	public IDiscordLobbyMemberTransaction.set_metadata_callback set_metadata;
+	public set_metadata_callback set_metadata;
 	/** C type : delete_metadata_callback* */
-	public IDiscordLobbyMemberTransaction.delete_metadata_callback delete_metadata;
+	public delete_metadata_callback delete_metadata;
 	/** C type : set_locked_callback* */
-	public IDiscordOverlayManager.set_locked_callback set_locked;
+	public set_locked_callback set_locked;
 	public interface set_type_callback extends Callback {
 		int apply(IDiscordLobbyTransaction lobby_transaction, int type);
 	};
@@ -58,7 +58,7 @@ public class IDiscordLobbyTransaction extends Structure {
 	 * @param delete_metadata C type : delete_metadata_callback*<br>
 	 * @param set_locked C type : set_locked_callback*
 	 */
-	public IDiscordLobbyTransaction(set_type_callback set_type, set_owner_callback set_owner, set_capacity_callback set_capacity, IDiscordLobbyMemberTransaction.set_metadata_callback set_metadata, IDiscordLobbyMemberTransaction.delete_metadata_callback delete_metadata, IDiscordOverlayManager.set_locked_callback set_locked) {
+	public IDiscordLobbyTransaction(set_type_callback set_type, set_owner_callback set_owner, set_capacity_callback set_capacity, set_metadata_callback set_metadata, delete_metadata_callback delete_metadata, set_locked_callback set_locked) {
 		super();
 		this.set_type = set_type;
 		this.set_owner = set_owner;
