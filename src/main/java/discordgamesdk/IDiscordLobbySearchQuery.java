@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class IDiscordLobbySearchQuery extends Structure {
 	/** C type : filter_callback* */
-	public IDiscordRelationshipManager.filter_callback filter;
+	public filter_callback filter;
 	/** C type : sort_callback* */
 	public sort_callback sort;
 	/** C type : limit_callback* */
@@ -46,7 +46,7 @@ public class IDiscordLobbySearchQuery extends Structure {
 	 * @param limit C type : limit_callback*<br>
 	 * @param distance C type : distance_callback*
 	 */
-	public IDiscordLobbySearchQuery(IDiscordRelationshipManager.filter_callback filter, sort_callback sort, limit_callback limit, distance_callback distance) {
+	public IDiscordLobbySearchQuery(filter_callback filter, sort_callback sort, limit_callback limit, distance_callback distance) {
 		super();
 		this.filter = filter;
 		this.sort = sort;
